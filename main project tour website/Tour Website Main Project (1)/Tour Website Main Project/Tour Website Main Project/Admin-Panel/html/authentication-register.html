@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista Tours - Login/Sign Up</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for the background image and font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll on body */
+        }
+
+        /* Container for the form */
+        .container {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* Rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Responsive width for smaller screens */
+            max-width: 1000px; /* Max width for larger screens */
+            display: flex;
+            flex-direction: column; /* Stack columns on small screens by default */
+            min-height: auto; /* Allow height to adjust based on content on small screens */
+            padding: 1rem; /* Add some padding to the container itself on small screens */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row; /* Side-by-side columns on medium+ screens */
+                height: 600px; /* Fixed height for desktop */
+                min-height: 600px; /* Ensure min-height on desktop */
+                padding: 0; /* Remove padding on desktop as content panels handle it */
+            }
+        }
+
+        /* Left panel with image and text */
+        .left-panel {
+            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            flex: 1; /* Take equal space */
+            min-height: 200px; /* Minimum height for the image panel on small screens */
+        }
+
+        .left-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2); /* Dark overlay for better text readability */
+            border-radius: 1.5rem 0 0 1.5rem; /* Match container border radius */
+            @media (max-width: 767px) {
+                border-radius: 1.5rem 1.5rem 0 0; /* Top rounded corners for mobile */
+            }
+        }
+
+        .left-panel-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .left-panel h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem; /* Larger font for the title */
+            margin-bottom: 1rem;
+            line-height: 1;
+            word-break: break-word; /* Ensure long words break */
+        }
+
+        .left-panel p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            max-width: 400px;
+            word-break: break-word; /* Ensure long words break */
+        }
+
+        /* Right panel with form */
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            flex: 1; /* Take equal space */
+            position: relative;
+            overflow-y: auto; /* Allow vertical scrolling within the panel if content overflows */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+            min-height: 400px; /* Minimum height for the form panel on small screens */
+        }
+
+        /* Airplane icon */
+        .airplane-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2.5rem;
+            color: #5d87ff; /* Blue color */
+            transform: rotate(45deg); /* Rotate for flying effect */
+            z-index: 10; /* Ensure it's above city skyline */
+        }
+
+        /* City skyline */
+        .city-skyline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; /* Height of the skyline */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="%23e0f2fe" d="M0,100 L0,50 C100,20 200,80 300,50 C400,20 500,80 600,50 C700,20 800,80 900,50 C1000,20 1000,100 1000,100 L0,100 Z" /><path fill="%23ccebff" d="M0,100 L0,60 C150,30 300,70 450,40 C600,10 750,50 900,20 C1000,0 1000,100 1000,100 L0,100 Z" /><path fill="%23a8e0ff" d="M0,100 L0,70 C120,40 240,80 360,50 C480,20 600,60 720,30 C840,0 960,40 1000,20 C1000,100 1000,100 1000,100 L0,100 Z" /></svg>');
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .form-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 350px; /* Max width for form elements */
+            text-align: center;
+        }
+
+        .form-content h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #5d87ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-content p.subtitle {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: -0.75rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            color: #6b7280;
+            background-color: #ffffff;
+            padding: 0 0.25rem;
+            z-index: 1;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+
+        .input-group input:focus {
+            border-color: #5d87ff;
+        }
+
+        .input-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 1.5rem;
+        }
+
+        .forgot-password a {
+            color: #5d87ff;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #5d87ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        .form-button:hover {
+            background-color: #5d87ff;
+            transform: translateY(-2px);
+        }
+
+        .social-login {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #d1d5db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            color: #6b7280;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .social-icon:hover {
+            border-color: #5d87ff;
+            color: #007bff;
+        }
+
+        .signup-link {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .signup-link a {
+            color: #5d87ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Panel transitions for functionality */
+        .form-panel {
+            width: 100%;
+            transition: transform 0.6s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            backface-visibility: hidden; /* Prevent flickering */
+            box-sizing: border-box; /* Include padding in width/height */
+            overflow-y: auto; /* Allow scrolling within panels if content overflows */
+        }
+
+        .sign-in-panel {
+            transform: translateX(0%);
+            opacity: 1;
+            z-index: 20;
+        }
+
+        .sign-up-panel {
+            transform: translateX(100%);
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .container.right-panel-active .sign-in-panel {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .container.right-panel-active .sign-up-panel {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Left Panel (Image and Text) -->
+        <div class="left-panel rounded-l-2xl md:rounded-l-2xl md:rounded-tr-none rounded-t-2xl">
+            <div class="left-panel-content">
+                <h1 class="text-white text-5xl md:text-6xl font-bold mb-4">Travelista Tours</h1>
+                <p class="text-white text-lg md:text-xl leading-relaxed")>
+                    Travel is the only purchase that enriches you in ways beyond material wealth
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Panel (Login/Sign Up Forms) -->
+        <div class="right-panel relative rounded-r-2xl md:rounded-r-2xl md:rounded-bl-none rounded-b-2xl">
+            <!-- Airplane Icon -->
+            <i class="fas fa-plane airplane-icon"></i>
+
+            <!-- City Skyline SVG -->
+            <div class="city-skyline"></div>
+
+            <!-- Sign In Panel -->
+            <div class="form-panel sign-in-panel" id="signInPanel">
+                <div class="form-content">
+                    <h2 class="text-blue-600">Welcome</h2>
+                    <p class="subtitle">Login with Email</p>
+
+                    <div class="input-group">
+                        <label for="signInEmail">Email Id</label>
+                        <input type="email" id="signInEmail" placeholder="thisisxl@mail.com" required />
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="input-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" id="signInPassword" placeholder="**********" required />
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+
+                    <button class="form-button" id="signInButton">LOGIN</button>
+
+                    <p class="social-login text-gray-500 my-4 relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:w-5/12 before:h-px before:bg-gray-300 after:content-[''] after:absolute after:right-0 after:top-1/2 after:w-5/12 after:h-px after:bg-gray-300">
+                        OR
+                    </p>
+
+                    <div class="social-icons">
+                        <div class="social-icon"><i class="fab fa-google"></i></div>
+                        <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+                        <div class="social-icon"><i class="fab fa-apple"></i></div>
+                    </div>
+
+                    <p class="signup-link">
+                        Don't have account? <a href="#" id="signUpLink">Register Now</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sign Up Panel (Initially hidden) -->
+            <div class="form-panel sign-up-panel" id="signUpPanel">
+                <div class="form-content">
+                    <h2 class="text-blue-600">Create Account</h2>
+                    <p class="subtitle">Join us to explore the world!</p>
+
+                    <div class="input-group">
+                        <label for="signUpName">Name</label>
+                        <input type="text" id="signUpName" placeholder="John Doe" required />
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+                    <div class="input-group">
+                        <label for="signUpEmail">Email</label>
+                        <input type="email" id="signUpEmail" placeholder="john.doe@example.com" required />
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="input-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" id="signUpPassword" placeholder="**********" required />
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+
+                    <button class="form-button" id="signUpButton">SIGN UP</button>
+
+                    <p class="social-login text-gray-500 my-4 relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:w-5/12 before:h-px before:bg-gray-300 after:content-[''] after:absolute after:right-0 after:top-1/2 after:w-5/12 after:h-px after:bg-gray-300">
+                        OR
+                    </p>
+
+                    <div class="social-icons">
+                        <div class="social-icon"><i class="fab fa-google"></i></div>
+                        <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+                        <div class="social-icon"><i class="fab fa-apple"></i></div>
+                    </div>
+
+                    <p class="signup-link">
+                        Already have an account? <a href="#" id="signInLink">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the container and buttons
+        const container = document.getElementById('container');
+        const signUpLink = document.getElementById('signUpLink');
+        const signInLink = document.getElementById('signInLink');
+        const signInButton = document.getElementById('signInButton');
+        const signUpButton = document.getElementById('signUpButton');
+
+        // Event listener for "Register Now" link (switches to sign-up panel)
+        signUpLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            container.classList.add('right-panel-active');
+        });
+
+        // Event listener for "Sign In" link (switches back to sign-in panel)
+        signInLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            container.classList.remove('right-panel-active');
+        });
+
+        // Placeholder for actual login functionality
+        signInButton.addEventListener('click', () => {
+            const email = document.getElementById('signInEmail').value;
+            const password = document.getElementById('signInPassword').value;
+            console.log('Sign In Attempt:', { email, password });
+            // In a real application, you would send this data to a server for authentication.
+            // For this example, we'll just log it.
+            alertMessage('Login functionality not implemented. Check console for details.', 'info');
+        });
+
+        // Placeholder for actual signup functionality
+        signUpButton.addEventListener('click', () => {
+            const name = document.getElementById('signUpName').value;
+            const email = document.getElementById('signUpEmail').value;
+            const password = document.getElementById('signUpPassword').value;
+            console.log('Sign Up Attempt:', { name, email, password });
+            // In a real application, you would send this data to a server to create a new user.
+            // For this example, we'll just log it.
+            alertMessage('Sign Up functionality not implemented. Check console for details.', 'info');
+        });
+
+        /**
+         * Custom alert message function (replaces native alert())
+         * @param {string} message - The message to display.
+         * @param {string} type - Type of message (e.g., 'info', 'success', 'error').
+         */
+        function alertMessage(message, type = 'info') {
+            const existingAlert = document.getElementById('customAlert');
+            if (existingAlert) {
+                existingAlert.remove();
+            }
+
+            const alertDiv = document.createElement('div');
+            alertDiv.id = 'customAlert';
+            alertDiv.className = `fixed top-4 left-1/2 transform -translate-x-1/2 p-4 rounded-lg shadow-lg text-white z-50 transition-all duration-300 ease-in-out`;
+
+            let bgColor = '';
+            switch (type) {
+                case 'success':
+                    bgColor = 'bg-green-500';
+                    break;
+                case 'error':
+                    bgColor = 'bg-red-500';
+                    break;
+                case 'info':
+                default:
+                    bgColor = 'bg-blue-500';
+                    break;
+            }
+            alertDiv.classList.add(bgColor);
+            alertDiv.textContent = message;
+
+            document.body.appendChild(alertDiv);
+
+            // Automatically remove the alert after 3 seconds
+            setTimeout(() => {
+                alertDiv.classList.add('opacity-0');
+                alertDiv.addEventListener('transitionend', () => alertDiv.remove());
+            }, 3000);
+        }
+
+        // Replace the placeholder image with your actual image URL
+        // Make sure to host your image and replace 'https://placehold.co/600x600/000000/FFFFFF?text=Travelista+Tours+Image'
+        // with the direct URL to your image.
+        document.querySelector('.left-panel').style.backgroundImage = "url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d')";
+        
+      </script>
+</body>
+</html>

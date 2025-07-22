@@ -1,0 +1,1412 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/* HERO SECTION IMAGE */
+
+.hero-section {
+  background-image: url("Scroll.png");
+  /* <-- your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Transparent Navbar with padding */
+.custom-navbar {
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 10;
+
+}
+
+/* Logo height */
+.image-logo {
+  height: 50px;
+  padding-left: 180%;
+  transition: transform 0.3s ease;
+
+}
+
+.image-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav Links */
+/* .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #DF6951 !important;
+  text-decoration: underline;
+} */
+
+
+/* __________extrapractice_____________ */
+
+ul li a{
+  color: #DF6951;
+  padding: 8px 16px;
+  margin: 0 12px;
+
+  transition: all 0.4s ease;
+}
+ul li a{
+  color: white !important; 
+}
+ul li a:hover{
+  background-color: #9da0a3;
+  color: white !important; 
+}
+ul li a::before,
+ul li a::after {
+  content: "";
+  border:2px solid #DF6951;
+  opacity:0;
+  transition: all 0.4s ease;
+
+
+}
+
+ul li a ::before{
+  bottom: 10px;
+  left: 10px;
+  border-width: 0 0 2px 2px;
+
+}
+
+ ul li a ::after{
+  top: 10px;
+  right: 10px;
+  border-width: 2px 2px 0 0;
+ }
+
+ ul li a:hover::before{
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+
+ }
+
+ ul li a:hover::after{
+  opacity: 1;
+  top: -8px;
+  right: -8px;
+ }
+
+
+
+/* Buttons */
+.custom-btn {
+  border: 2px solid rgb(255, 255, 255);
+  background-color: transparent;
+  color: white;
+  padding: 5px 15px;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.custom-btn:hover {
+  background-color: #DF6951;
+  border-color: white;
+  color: white;
+}
+
+/* -----inside navbar-section---------  */
+.head_1 {
+  color: white;
+  font-weight: bolder;
+  padding-left: 10%;
+  padding-top: 10%;
+
+}
+
+.transparent-div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 80px;
+  width: 30%;
+  margin-left: 10%;
+
+
+}
+
+.span-text {
+
+  padding: 20px;
+  font-size: large;
+
+}
+
+.sumbit-btn {
+  background-color: #DF6951;
+  width: 130px;
+  border-radius: 12px;
+  margin-left: 15px;
+  position: relative;
+  bottom: 50px;
+  left: 70%;
+}
+
+.elipse-image {
+  padding-left: 10%;
+  padding-top: 20px;
+
+}
+
+.text-image {
+  color: white;
+  padding-left: 10px;
+  position: relative;
+  top: 10px;
+
+
+}
+
+/* -----inside navbar-section---------  */
+
+/* <!-- ------------------logo-section-------------------- --> */
+.logo-div {
+  background-color: #F7F7F7;
+  height: 100px;
+  position: relative;
+  bottom: 110px;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+
+}
+
+/* <!-- ------------------logo-section-------------------- --> */
+
+
+/* <!-- ------------card-section-------------- --> */
+.category {
+  color: #df6b51;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-left: 45%;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  padding-left: 35%;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-box {
+  width: 220px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #f8f9fb;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-box img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.service-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2a2a5a;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 14px;
+  color: #6c6c8a;
+  line-height: 1.5;
+}
+
+/* Highlighted center box */
+.highlight {
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 50px;
+  height: 50px;
+  background: #df6b51;
+  border-radius: 15px;
+  z-index: -1;
+}
+
+/* <!-- ------------card-section-------------- --> */
+
+.important {
+  margin-top: 10%;
+}
+
+.section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.image-side {
+  flex: 1 1 45%;
+}
+
+.image-side img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.text-side {
+  flex: 1 1 45%;
+}
+
+.label {
+  color: #df6b51;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #6c6c8a;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.button {
+  background-color: #df6b51;
+  color: #ffffff;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+  background: radial-gradient(circle at center, #df6b51, #b6452e);
+  border-radius: 40px;
+  filter: blur(12px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+/* <!-- ------------book a trip-------------- --> */
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px;
+  gap: 40px;
+ 
+  
+}
+
+/* ---------- LEFT SIDE ---------- */
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.small-title {
+  padding-left: 35%;
+  text-transform: uppercase;
+}
+
+.left .small-title {
+  color: #FF5B2E;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.left h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #1D1E4A;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  margin-left: 35%;
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+
+
+.step-text h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.step-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+.right {
+  position: relative;
+  bottom: 10%;
+  right: 10%;
+  top: 20%;
+}
+
+/* <!-- ------------book a trip-------------- --> */
+
+
+/* <!-- -----------------------short image section------------------------ --> */
+.image-sec {
+  height: 400px;
+  background-image: url(image.png);
+
+}
+
+.image-head {
+  position: relative;
+  top: 39%;
+  right: 6%;
+  color: #fff;
+  /* <!-- -----------------------short image section------------------------ --> */
+
+  /* <!-- ----------------------Europe Sightseeing Tours----------------------------- --> */
+
+}
+
+.promote-para {
+  text-transform: uppercase;
+  color: #DF6951;
+  font-weight: bolder;
+  padding-left: 20%;
+  padding-top: 6%;
+}
+
+.head-like {
+  font-weight: bolder;
+  padding-left: 20%;
+  font-size: xx-large;
+
+}
+
+.another-para {
+  padding-left: 20%;
+}
+
+.pac-button {
+  margin-left: 20%;
+}
+
+.images-four {
+  margin-left: 20%;
+  padding-top: 2%;
+}
+
+.image-trans {
+  transition: transform 0.3s ease;
+}
+
+.image-trans:hover {
+  transform: scale(1.1);
+}
+.pac-button{
+   transition: transform 0.3s ease;
+}
+
+
+.pac-button:hover{
+   transform: scale(1.1);
+}
+
+
+/* <!-- ----------------------Europe Sightseeing Tours----------------------------- --> */
+
+/* <!-- ---------------------Explore Packages--------------------- --> */
+
+
+.two-divs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sea-div,
+.mall-div {
+  height: 400px;
+  margin-top: 40px;
+  width: 1000px;
+}
+
+
+.sea-div img,
+.mall-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imp-div {
+  /* background-color: #c3c3da; */
+  text-align: center;
+  position: relative;
+  bottom: 70%;
+
+}
+
+.head-imp {
+  padding-left: 20px;
+  color: white;
+}
+
+.para-imp {
+  padding-top: 12px;
+  font-weight: bolder;
+  color: white;
+}
+
+.pac-btn {
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  color: white;
+  background-color: transparent;
+  width: 170PX;
+  
+}
+
+
+.pac-btn:hover{
+  background-color: #DF6951;
+}
+/* <!-- ---------------------Explore Packages--------------------- --> */
+
+
+/* <!-- ------------------------Packages-------------------------------- --> */
+
+
+.trendy-para {
+  padding-left: 45%;
+  padding-top: 25px;
+  color: #DF6951;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.head-two {
+  color: #181E4B;
+}
+
+.spany {
+  padding-left: 10%;
+  color: #181E4B;
+}
+
+.carded {
+  display: flex;
+  gap: 40px;
+  margin-left: 20%;
+
+}
+
+
+
+.package-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.flag-icon {
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url(Ellipse\ 623.png);
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.flag-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.trip-details {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.card-content {
+  padding: 35px 20px 20px;
+  background-color: #ffffff;
+  color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card-content h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.rating {
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.price-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.current-price {
+  color: #DF6951;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.old-price {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+
+.explore-btn {
+  background: linear-gradient(45deg, #f66e52, #df6951);
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 100, 80, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+
+.flag-icon-two {
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url(Ellipse\ 623\ \(1\).png);
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.flag-icon-three {
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url(Ellipse\ 623\ \(2\).png);
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* <!-- ------------------------Packages-------------------------------- --> */
+
+/* <!-- ----------------------------clients section-------------------------- --> */
+.section-clients {
+  background-image: url("lastimage.png");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  position: relative;
+  text-align: center;
+}
+
+.promo {
+  color: #DF6951;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #2a2a5a;
+}
+
+.testimonial-box {
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 70px 30px 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dp {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-weight: bold;
+  color: #000;
+}
+
+.arrows {
+  margin-top: 20px;
+}
+
+.arrow-btn {
+  background-color: #2a2a5a;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.pagination-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: #DF6951;
+}
+
+/* <!-- ----------------------------clients section-------------------------- --> */
+
+/* footer{
+    opacity: 0.7;
+} */
+ 
+
+/* Footer */
+.footer {
+  background-image: url("https://naturehikepakistan.pk/wp-content/uploads/elementor/thumbs/620c2765d1-min-qkjde8jgnh0mjjkc7khfq6ms785e2rrn0w7g5ciruw.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+background:rgba(77, 72, 72, 0.05);
+}
+
+.footer > * {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-top-banner {
+  background-color: #df6951;
+  padding: 30px 0;
+}
+
+.footer-top-banner h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links span {
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+}
+
+.social-links a {
+  background: white;
+  color: #df6951;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.footer-content {
+  padding: 60px 0;
+}
+
+.footer-col {
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col i {
+  color: #df6951;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.footer-col form {
+  margin-top: 15px;
+}
+
+.footer-col input[type="email"] {
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 25px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-col input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-col button {
+  background-color: #df6951;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.footer-col button:hover {
+  background-color: #c55a42;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom strong {
+  color: white;
+}
+
+.footer-bottom span {
+  color: #df6951;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ________travel logo mobile for mobile screen responsive_____________ */
+
+@media only screen and (max-width: 768px) {
+
+  .hero-section {
+    background-image: url("Scroll.png");
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .image-logo {
+    padding-left: 0;
+    height: 40px;
+  }
+
+  .transparent-div {
+    height: auto;
+    width: 90%;
+    margin: 20px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .span-text {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .sumbit-btn {
+    position: static;
+    margin-top: 15px;
+    width: 80%;
+  }
+
+  .head_1 {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+   text-decoration: underline;
+  }
+
+  .text-image {
+    padding-left: 0;
+    display: block;
+    margin: 10px auto;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .elipse-image {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+    max-width: 150px;
+  }
+
+  .logo-div {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .logo-div img {
+    max-width: 80px;
+    height: auto;
+  }
+
+  .custom-navbar {
+    padding: 10px;
+  }
+
+  .custom-btn {
+    margin-right: 0;
+    margin-top: 10px;
+    width: 100px;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+
+  .trivago {
+    position: relative;
+    right: 120px;
+  }
+
+
+  .category {
+    position: relative;
+    right: 40%;
+    bottom: 50px;
+  }
+
+  .head-logo {
+
+    position: relative;
+    right: 30%;
+    bottom: 50px;
+  }
+
+
+
+
+  .carded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    right: 10%;
+  }
+
+   .package-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ 
+  }
+
+ 
+  .card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+
+  .trip-details {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+ 
+  .card-content h2,
+  .location,
+  .price-box,
+  .explore-btn {
+    text-align: center;
+  }
+
+  .explore-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+ 
+  .head-two {
+    font-size: 24px;
+    position: relative;
+    right: 10%;
+  }
+
+  .trendy-para {
+
+    font-size: 16px;
+  }
+
+  .head-sec {
+    position: relative;
+    right: 20%;
+  }
+
+  .location {
+    position: relative;
+    right: 40%;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+
+  .label {
+
+    padding-left: 10px;
+  }
+
+  .heading {
+    font-size: x-large;
+    padding-left: 10px;
+  }
+
+  .description {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .head-for {
+    position: relative;
+    right: 40%;
+  }
+
+  .step {
+    position: relative;
+    right: 40%;
+  }
+
+  .small-title {
+    position: relative;
+    right: 40%;
+  }
+
+ 
+  .illu-image {
+     height: 220px;
+        position: relative;
+        right: -30;
+  }
+
+  .image-sec {
+    background-image: url(https://static.toiimg.com/thumb/msid-120797470,width-1280,height-720,resizemode-4/120797470.jpg);
+    background-size: cover;
+  }
+
+  .image-head {
+    color: black;
+    padding-left: 30px;
+  }
+
+  .images-four {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 50px;
+
+  }
+
+  .two-divs {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+
+}
+
+
+
+@media (max-width: 767.98px) {
+    .footer-title {
+        text-align: center;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background: #6c5ce7;
+}
+
+.footer-links {
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-links a {
+    color: #b4b6bb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.newsletter-text {
+    color: #9c9aa6;
+}
+
+.newsletter-form-custom .input-group {
+    flex-wrap: wrap;
+}
+
+.newsletter-input {
+    flex: 1 1 auto;
+    max-width: 100%;
+    background: #eeeeff;
+    border: 1px solid #eeeeff;
+    color: #9c9aa6;
+    padding: 0.75rem 1.25rem;
+    border-radius: 25px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.newsletter-input::placeholder {
+    color: #9c9aa6;
+}
+
+.newsletter-input:focus {
+    background: #d4d4f0;
+    border-color: #6c5ce7;
+    color: #333;
+    box-shadow: none;
+}
+
+.btn-subscribe {
+    background: #df6951;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+
+
+/* responsive about laptop */
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+  .hero-section {
+    height: 490px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-logo {
+    padding-left: 80%;
+    height: 45px;
+  }
+
+  .custom-navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .head_1 {
+    font-size: 35px;
+    line-height: 45px;
+    padding: 0 100px;
+  }
+
+  .transparent-div {
+    width: 530px;
+    height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .span-text {
+    font-size: 14px;
+  }
+
+  .sumbit-btn {
+
+    font-size: 14px;
+  }
+
+  .elipse-image {
+    width: 150px;
+    height: auto;
+  }
+
+  .text-image {
+    font-size: 12px;
+    padding-left: 20px;
+  }
+
+  .section{
+    display: flex;
+   position: relative;
+
+   
+  }
+
+  .illu-image{
+        position: relative;
+       left: 20%;
+        height: 350px;
+        top: 120px;
+       
+      
+
+  }
+
+  .carded{
+    position: relative;
+  right: 10%;
+
+  }
+}

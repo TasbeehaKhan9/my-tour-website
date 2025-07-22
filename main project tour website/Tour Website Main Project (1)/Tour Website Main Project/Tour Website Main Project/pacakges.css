@@ -1,0 +1,1281 @@
+ * {
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* HERO SECTION IMAGE */
+
+.hero-section {
+  background-image: url("Group\ 1000001796.png");
+  /* <-- your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Transparent Navbar with padding */
+.custom-navbar {
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 10;
+
+}
+
+/* Logo height */
+.image-logo {
+  height: 50px;
+  padding-left: 180%;
+  transition: transform 0.3s ease;
+
+}
+
+.image-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav Links */
+/* .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #DF6951 !important;
+  text-decoration: underline;
+} */
+
+
+/* __________extrapractice_____________ */
+
+ul li a{
+  color: #DF6951;
+  padding: 8px 16px;
+  margin: 0 12px;
+
+  transition: all 0.4s ease;
+}
+ul li a{
+  color: white !important; 
+}
+ul li a:hover{
+  background-color: #9da0a3;
+  color: white !important; 
+}
+ul li a::before,
+ul li a::after {
+  content: "";
+  border:2px solid #DF6951;
+  opacity:0;
+  transition: all 0.4s ease;
+
+
+}
+
+ul li a ::before{
+  bottom: 10px;
+  left: 10px;
+  border-width: 0 0 2px 2px;
+
+}
+
+ ul li a ::after{
+  top: 10px;
+  right: 10px;
+  border-width: 2px 2px 0 0;
+ }
+
+ ul li a:hover::before{
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+
+ }
+
+ ul li a:hover::after{
+  opacity: 1;
+  top: -8px;
+  right: -8px;
+ }
+
+
+
+/* Buttons */
+.custom-btn {
+  border: 2px solid rgb(255, 255, 255)!important;
+  background-color: transparent;
+  color: white !important;
+  padding: 5px 15px;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.custom-btn:hover {
+  background-color: #DF6951!important;;
+  border-color: white!important;
+  color: white!important;
+}
+.about-head{
+  text-align: center;
+  padding-top: 10%;
+  color: white;
+  font-size: 150px;
+   font-family: "Yesteryear", cursive;
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+  
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    text-align: center;
+    color: white;
+}
+.hero-content{
+margin-bottom: 290px;
+padding-left: 220px;
+position: relative;
+left: 370px;
+}
+
+.search-tour-text {
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    
+}
+
+
+
+.hero-title {
+  
+  text-align: center;
+  padding-top: 10%;
+  color: white;
+  font-size: 120px;
+   font-family: "Yesteryear", cursive;
+    font-weight: 700;
+   margin: 0;
+}
+    
+
+/* features-box */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 4))
+    }
+
+}
+
+.slider {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top:420px ;
+    right: 20%;
+    width: 90%;
+    max-width: 960px;
+    width: 70%;
+    display: flex;
+    gap: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    margin-top: -60px;
+    border-radius: 15px;
+    background-color: rgb(242, 242, 242);
+
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider .slide-track {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(250px * 8);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: -10px;
+
+}
+
+.content img {
+    width: 20px;
+    margin-bottom: 20px;
+
+}
+
+.content p {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.offcanvas {
+    background: transparent !important;
+}
+
+.offcanvas-body {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+}
+
+.offcanvas-body img {
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+    animation: fadeInDown 1s;
+}
+
+/* Main Content */
+.main-content {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+/* Destinations Section */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-badges {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.orange-badge {
+    background: #FF6B47;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.destination-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.destination-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.rating {
+    font-size: 14px;
+    color: #FFA500;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-arrow,
+.page-num {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+.page-num.active {
+    background: #FF6B47;
+    color: white;
+}
+
+.page-arrow:hover,
+.page-num:hover {
+    background: #f0f0f0;
+}
+
+.page-num.active:hover {
+    background: #FF6B47;
+}
+
+/* Sidebar */
+.plan-trip-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.plan-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.plan-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.trip-inputs {
+    margin-bottom: 30px;
+}
+
+.trip-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.trip-input:focus {
+    outline: none;
+    border-color: #FF6B47;
+}
+
+.price-filter-section {
+    margin-bottom: 30px;
+}
+
+.filter-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.price-slider {
+    margin-bottom: 20px;
+}
+
+.slider-track {
+    position: relative;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.slider-range {
+    position: absolute;
+    left: 20%;
+    right: 30%;
+    height: 100%;
+    background: #FF6B47;
+    border-radius: 3px;
+}
+
+.slider-thumb {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FF6B47;
+    border-radius: 50%;
+    top: -5px;
+    cursor: pointer;
+}
+
+.left-thumb {
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+.right-thumb {
+    right: 30%;
+    transform: translateX(50%);
+}
+
+.price-range-text {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.book-now-button {
+    width: 100%;
+    background: #FF6B47;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.book-now-button:hover {
+    background: #FF5722;
+}
+
+.travel-illustration {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.travel-illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.footer {
+  background-image: url("https://naturehikepakistan.pk/wp-content/uploads/elementor/thumbs/620c2765d1-min-qkjde8jgnh0mjjkc7khfq6ms785e2rrn0w7g5ciruw.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+background:rgba(77, 72, 72, 0.05);
+}
+
+.footer > * {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-top-banner {
+  background-color: #df6951;
+  padding: 30px 0;
+}
+
+.footer-top-banner h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links span {
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+}
+
+.social-links a {
+  background: white;
+  color: #df6951;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.footer-content {
+  padding: 60px 0;
+}
+
+.footer-col {
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col i {
+  color: #df6951;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.footer-col form {
+  margin-top: 15px;
+}
+
+.footer-col input[type="email"] {
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 25px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-col input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-col button {
+  background-color: #df6951;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.footer-col button:hover {
+  background-color: #c55a42;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom strong {
+  color: white;
+}
+
+.footer-bottom span {
+  color: #df6951;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav {
+        gap: 20px;
+    }
+    
+    .hero-title {
+        font-size: 50px;
+    }
+    
+    .filter-options {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .plan-trip-box {
+        padding: 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .image-logo{
+    position: relative;
+    right: 170%;
+
+  }
+  
+  .hero-content{
+   margin-right: 950px;
+   
+  }
+ .slider {
+    display: none;
+  }
+}
+
+/* Mobile Responsive Media Queries */
+
+/* Extra Small Devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Fix horizontal scrolling */
+  * {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Navbar fixes */
+  .image-logo {
+    padding-left: 0 !important;
+    height: 40px;
+    position: static;
+  }
+
+  .custom-navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .nav-item {
+    margin: 5px 0;
+  }
+
+  .custom-btn {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  /* Hero section fixes */
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .hero-content {
+    margin: 0 !important;
+    padding: 20px !important;
+    position: static !important;
+    left: 0 !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .search-tour-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: 40px !important;
+    padding-top: 20px !important;
+    line-height: 1.2;
+    margin: 20px 0;
+  }
+
+  /* Slider fixes */
+  .slider {
+    display: none !important;
+  }
+
+  /* Main content fixes */
+  .main-content {
+    padding: 30px 0;
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  /* Destinations grid */
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .destination-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+
+  .image-badges {
+    flex-direction: column;
+    gap: 5px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .orange-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+    text-align: center;
+  }
+
+  .card-info {
+    padding: 15px;
+  }
+
+  .destination-name {
+    font-size: 18px;
+  }
+
+  .destination-desc {
+    font-size: 13px;
+  }
+
+  /* Sidebar fixes */
+  .plan-trip-box {
+    padding: 20px 15px;
+    margin: 0 15px;
+  }
+
+  .plan-title {
+    font-size: 20px;
+  }
+
+  .plan-desc {
+    font-size: 13px;
+  }
+
+  .trip-input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .travel-illustration {
+    margin-top: 15px;
+  }
+
+  .travel-illustration img {
+    max-width: 80%;
+  }
+
+  /* Footer fixes */
+  .footer-top-banner .row {
+    text-align: center;
+  }
+
+  .footer-top-banner h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .footer-content {
+    padding: 40px 0;
+  }
+
+  .footer-col {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .footer-col h4 {
+    font-size: 16px;
+  }
+
+  .footer-col p,
+  .footer-col a {
+    font-size: 13px;
+  }
+}
+
+/* Small Devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .image-logo {
+    padding-left: 50% !important;
+    height: 45px;
+  }
+
+  .hero-content {
+    margin-left: 0 !important;
+    padding-left: 50px !important;
+    position: static !important;
+    left: 0 !important;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 60px !important;
+    padding-top: 30px !important;
+  }
+
+  .slider {
+    width: 90% !important;
+    right: 5% !important;
+    top: 300px !important;
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .plan-trip-box {
+    padding: 25px;
+  }
+}
+
+/* Medium Devices (landscape tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .image-logo {
+    padding-left: 100% !important;
+  }
+
+  .hero-content {
+    margin-left: 100px !important;
+    padding-left: 100px !important;
+    left: 100px !important;
+  }
+
+  .hero-title {
+    font-size: 80px !important;
+  }
+
+  .slider {
+    width: 80% !important;
+    right: 10% !important;
+  }
+
+  .content-layout {
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .image-logo {
+    padding-left: 120% !important;
+  }
+
+  .hero-content {
+    margin-left: 150px !important;
+    padding-left: 150px !important;
+    left: 200px !important;
+  }
+
+  .hero-title {
+    font-size: 100px !important;
+  }
+
+  .slider {
+    width: 75% !important;
+    right: 12.5% !important;
+  }
+}
+
+/* Extra Large Devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) {
+  .image-logo {
+    padding-left: 180%;
+  }
+
+  .hero-content {
+    margin-bottom: 290px;
+    padding-left: 220px;
+    position: relative;
+    left: 370px;
+  }
+
+  .hero-title {
+    font-size: 120px;
+  }
+
+  .slider {
+    width: 70%;
+    right: 20%;
+  }
+}
+
+/* Additional fixes for very small screens */
+@media only screen and (max-width: 480px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-title {
+    font-size: 35px !important;
+    line-height: 1.1;
+  }
+
+  .search-tour-text {
+    font-size: 11px;
+  }
+
+  .destination-card {
+    margin: 0 10px;
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  .destination-name {
+    font-size: 16px;
+  }
+
+  .destination-desc {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .plan-trip-box {
+    margin: 0 10px;
+    padding: 15px;
+  }
+
+  .plan-title {
+    font-size: 18px;
+  }
+
+  .trip-input {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .book-now-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    gap: 5px;
+  }
+
+  .page-arrow,
+  .page-num {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .footer-top-banner h2 {
+    font-size: 18px;
+  }
+
+  .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Landscape orientation fixes for mobile */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 30px !important;
+    padding-top: 10px !important;
+  }
+
+  .hero-content {
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+}
+
+/* Fix for navbar collapse on mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-item {
+    margin: 8px 0;
+  }
+
+  .d-flex.gap-2 {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .custom-btn {
+    margin: 5px;
+    width: auto;
+    min-width: 100px;
+  }
+}
+
+/* Prevent horizontal scrolling globally */
+@media (max-width: 768px) {
+  * {
+    max-width: 100% !important;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    overflow-x: hidden;
+  }
+
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .col-lg-3,
+  .col-md-6,
+  .col-sm-12 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .hero-overlay {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    padding-right: -90px;
+    padding-right: 20px;
+    
+  }
+
+  .hero-content {
+    text-align: center;
+     padding-right: -90px;
+    padding-right: 20px;
+    
+
+  }
+
+  .search-tour-text {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+   position: relative;
+    right: 90px;
+     
+  }
+
+  .hero-title {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.2;
+   position: relative;
+    right: 90px;
+   
+  }
+}

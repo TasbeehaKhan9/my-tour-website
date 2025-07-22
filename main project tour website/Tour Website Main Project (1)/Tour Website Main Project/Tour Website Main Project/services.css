@@ -1,0 +1,1157 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+   box-sizing: border-box;
+  
+}
+
+/* HERO SECTION IMAGE */
+
+.hero-section {
+  background-image: url(https://depalm.com/wp-content/uploads/sites/4988/2024/07/Carlosdelgadx-34.jpeg?resize=1200%2C900&zoom=2);
+  /* <-- your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Transparent Navbar with padding */
+.custom-navbar {
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 10;
+
+}
+
+/* Logo height */
+.image-logo {
+  height: 50px;
+  padding-left: 180%;
+  transition: transform 0.3s ease;
+
+}
+
+.image-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav Links */
+/* .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #DF6951 !important;
+  text-decoration: underline;
+} */
+
+
+/* __________extrapractice_____________ */
+
+ul li a{
+  color: #DF6951;
+  padding: 8px 16px;
+  margin: 0 12px;
+
+  transition: all 0.4s ease;
+}
+ul li a{
+  color: white !important; 
+}
+ul li a:hover{
+  background-color: #9da0a3;
+  color: white !important; 
+}
+ul li a::before,
+ul li a::after {
+  content: "";
+  border:2px solid #DF6951;
+  opacity:0;
+  transition: all 0.4s ease;
+
+
+}
+
+ul li a ::before{
+  bottom: 10px;
+  left: 10px;
+  border-width: 0 0 2px 2px;
+
+}
+
+ ul li a ::after{
+  top: 10px;
+  right: 10px;
+  border-width: 2px 2px 0 0;
+ }
+
+ ul li a:hover::before{
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+
+ }
+
+ ul li a:hover::after{
+  opacity: 1;
+  top: -8px;
+  right: -8px;
+ }
+
+
+
+/* Buttons */
+.custom-btn {
+  border: 2px solid rgb(255, 255, 255)!important;
+  background-color: transparent;
+  color: white !important;
+  padding: 5px 15px;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.custom-btn:hover {
+  background-color: #DF6951!important;;
+  border-color: white!important;
+  color: white!important;
+}
+.about-head{
+  text-align: center;
+  padding-top: 10%;
+  color: white;
+  font-size: 150px;
+   font-family: "Yesteryear", cursive;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-title {
+  
+  text-align: center;
+  padding-top: 10%;
+  color: white;
+  font-size: 80px;
+   font-family: "Yesteryear", cursive;
+    font-weight: 700;
+   margin: 0;
+}
+
+.explore-text {
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+
+
+/* Navigation Tabs */
+.nav-tabs {
+    background: white;
+    padding: 0;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+    background: #f8f9fa;
+    border-bottom-color: #FF6B47;
+}
+
+.tab:hover {
+    background: #f8f9fa;
+}
+
+.tab-icon {
+    font-size: 18px;
+    color: #666;
+}
+
+.tab.active .tab-icon {
+    color: #FF6B47;
+}
+
+.tab-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Main Content */
+.main-content {
+    background: white;
+    padding: 60px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+/* Tour Details */
+.tour-details {
+    background: white;
+}
+
+.tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.tour-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+}
+
+.tour-price {
+    text-align: right;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FF6B47;
+}
+
+.per-couple {
+    font-size: 14px;
+    color: #666;
+    display: block;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 16px;
+}
+
+.review-count {
+    font-size: 14px;
+    color: #666;
+}
+
+.tour-description {
+    margin-bottom: 40px;
+}
+
+.tour-description p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.tour-info {
+    margin-bottom: 40px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #FF6B47;
+    font-size: 14px;
+}
+
+.info-value {
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+
+.tour-includes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF6B47;
+    margin-bottom: 15px;
+}
+
+.include-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.include-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.item-icon {
+    font-size: 16px;
+}
+
+/* Booking Section */
+.booking-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.booking-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input,
+.form-textarea {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #FF6B47;
+}
+
+.form-textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.check-availability-btn,
+.book-now-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.check-availability-btn {
+    background: white;
+    color: #FF6B47;
+    border: 2px solid #FF6B47;
+}
+
+.check-availability-btn:hover {
+    background: #FF6B47;
+    color: white;
+}
+
+.book-now-btn {
+    background: linear-gradient(135deg, #FF6B47 0%, #FF5722 100%);
+    color: white;
+}
+
+.book-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 71, 0.4);
+}
+
+/* Gallery Section */
+.gallery-section {
+    background: white;
+    padding: 60px 0;
+}
+
+.gallery-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.gallery-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.travel-illustration {
+    text-align: center;
+}
+
+.travel-illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.footer {
+  background-image: url("https://naturehikepakistan.pk/wp-content/uploads/elementor/thumbs/620c2765d1-min-qkjde8jgnh0mjjkc7khfq6ms785e2rrn0w7g5ciruw.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+background:rgba(77, 72, 72, 0.05);
+}
+
+.footer > * {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-top-banner {
+  background-color: #df6951;
+  padding: 30px 0;
+}
+
+.footer-top-banner h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links span {
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+}
+
+.social-links a {
+  background: white;
+  color: #df6951;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.footer-content {
+  padding: 60px 0;
+}
+
+.footer-col {
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col i {
+  color: #df6951;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.footer-col form {
+  margin-top: 15px;
+}
+
+.footer-col input[type="email"] {
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 25px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-col input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-col button {
+  background-color: #df6951;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.footer-col button:hover {
+  background-color: #c55a42;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom strong {
+  color: white;
+}
+
+.footer-bottom span {
+  color: #df6951;
+}
+
+
+/* Mobile Responsive Media Queries for Services Page */
+
+/* Extra Small Devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Fix horizontal scrolling */
+  * {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Navbar fixes */
+  .image-logo {
+    padding-left: 0 !important;
+    height: 40px;
+    position: static;
+  }
+
+  .custom-navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .nav-item {
+    margin: 5px 0;
+  }
+
+  .custom-btn {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  /* Hero section fixes */
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero-content {
+    padding: 20px !important;
+    text-align: center;
+  }
+
+  .explore-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: 40px !important;
+    padding-top: 10px !important;
+    line-height: 1.2;
+  }
+
+  /* Navigation tabs */
+  .nav-tabs {
+    margin-top: -30px;
+    padding: 0 15px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    border-radius: 10px;
+  }
+
+  .tab {
+    flex: 1 0 50%;
+    padding: 12px 5px;
+    font-size: 12px;
+  }
+
+  .tab-icon {
+    font-size: 14px;
+  }
+
+  .tab-text {
+    font-size: 12px;
+  }
+
+  /* Main content */
+  .main-content {
+    padding: 30px 0;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  /* Tour details */
+  .tour-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tour-title {
+    font-size: 24px;
+  }
+
+  .tour-price {
+    text-align: left;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .tour-description p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .info-row {
+    padding: 10px 0;
+  }
+
+  .info-label,
+  .info-value {
+    font-size: 13px;
+  }
+
+  .tour-includes {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 15px;
+  }
+
+  .include-item {
+    font-size: 13px;
+  }
+
+  /* Booking section */
+  .booking-card {
+    padding: 20px 15px;
+  }
+
+  .booking-title {
+    font-size: 20px;
+  }
+
+  .booking-desc {
+    font-size: 13px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .check-availability-btn,
+  .book-now-btn {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  /* Gallery section */
+  .gallery-section {
+    padding: 30px 0;
+  }
+
+  .gallery-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .gallery-title {
+    font-size: 24px;
+  }
+
+  .gallery-desc {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-item img {
+    height: 100px;
+  }
+
+  .travel-illustration {
+    margin-top: 20px;
+  }
+
+  .travel-illustration img {
+    max-width: 80%;
+  }
+
+  /* Footer fixes */
+  .footer-top-banner .row {
+    text-align: center;
+  }
+
+  .footer-top-banner h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .footer-content {
+    padding: 40px 0;
+  }
+
+  .footer-col {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .footer-col h4 {
+    font-size: 16px;
+  }
+
+  .footer-col p,
+  .footer-col a {
+    font-size: 13px;
+  }
+}
+
+/* Small Devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .image-logo {
+    padding-left: 50% !important;
+    height: 45px;
+  }
+
+  .hero-title {
+    font-size: 60px !important;
+    padding-top: 30px !important;
+  }
+
+  .tabs {
+    max-width: 90%;
+  }
+
+  .tab {
+    padding: 15px 10px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .tour-includes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium Devices (landscape tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .image-logo {
+    padding-left: 100% !important;
+  }
+
+  .hero-title {
+    font-size: 70px !important;
+  }
+
+  .content-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .tour-title {
+    font-size: 28px;
+  }
+
+  .gallery-content {
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-item img {
+    height: 100px;
+  }
+}
+
+/* Large Devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .image-logo {
+    padding-left: 120% !important;
+  }
+
+  .hero-title {
+    font-size: 70px !important;
+  }
+
+  .content-grid {
+    gap: 40px;
+  }
+
+  .gallery-content {
+    gap: 40px;
+  }
+}
+
+/* Fix for navbar collapse on mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-item {
+    margin: 8px 0;
+  }
+
+  .d-flex.gap-2 {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .custom-btn {
+    margin: 5px;
+    width: auto;
+    min-width: 100px;
+  }
+}
+
+/* Additional fixes for very small screens */
+@media only screen and (max-width: 480px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-title {
+    font-size: 35px !important;
+    line-height: 1.1;
+  }
+
+  .explore-text {
+    font-size: 11px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    max-width: 80%;
+  }
+
+  .tab {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .tab:last-child {
+    border-bottom: none;
+  }
+
+  .tour-title {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .tour-description p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item img {
+    height: 90px;
+  }
+
+  .booking-card {
+    padding: 15px;
+  }
+
+  .booking-title {
+    font-size: 18px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .check-availability-btn,
+  .book-now-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Landscape orientation fixes for mobile */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero-title {
+    font-size: 30px !important;
+    padding-top: 10px !important;
+  }
+
+  .tabs {
+    flex-wrap: nowrap;
+  }
+
+  .tab {
+    padding: 10px 5px;
+  }
+}
+
+/* Prevent horizontal scrolling globally */
+@media (max-width: 768px) {
+  * {
+    max-width: 100% !important;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    overflow-x: hidden;
+  }
+
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .col-lg-3,
+  .col-md-6,
+  .col-sm-12 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
